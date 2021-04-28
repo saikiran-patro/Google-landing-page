@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favg.png">
+    <title>Google</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            text-decoration: none;
+        }
+        li{
+            list-style:none;
+        }
+
+        .top
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            
+        }
+        .it1,.it2
+        {
+            margin-top: 1rem;
+            padding-left: 15px;
+        }
+        
+        .it3
+        {
+            margin-top: 20px;
+            width: 1rem;
+            height: 1rem;
+            padding-left: 25px;
+        }
+        .it4
+        {
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+        #menu
+        {
+            width: 100%;
+            height: 100%;
+            
+        }
+        #signin
+        {
+            height: 2rem;
+            width: 4rem;
+            border:1px solid cornflowerblue;
+            background-color: cornflowerblue;
+            color: darkturquoise;
+            border-radius: 6%;
+            margin-right: 1rem;
+        }
+        #signin:hover
+        {
+            border: 2px solid darkblue;
+        
+        }
+        .grid
+        {
+            border-radius: 100%;
+        }
+        #menu:hover
+        {
+            background-color: grey;
+        }
+        #doodle
+        {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+            
+        }
+        #doodle-img
+        {
+            margin-top: 5rem;
+            height:15rem;
+            width: 35rem;
+            
+        }
+        #search-field svg {
+        fill: white;
+        width: 30px;
+        height: 30px;
+        }
+        #search-icon
+        {
+            position: relative;
+            top:3px;
+            width: 2rem;
+            height: 1rem;
+        }
+        .search-container
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .search{
+            width:575px;
+            border-radius:30px;
+            border:1px solid #dcdcdc;
+            border-radius: 30px;
+            
+        }
+        .search:hover
+        {
+            box-shadow: 1px 1px 8px 1px #dcdcdc;
+        }
+        .search:focus-within{
+            box-shadow: 1px 1px 8px 1px #dcdcdc;
+            outline:none;
+        }
+        #searchbar
+        {
+            height:40px;
+            border:none;
+            width:500px;
+            font-size:16px;
+            outline: none;
+  
+        }
+        .voice{
+            height:20px;
+            position:relative;
+            top:5px;
+            left:1px;
+        }
+        .buttons{
+            margin-top:30px;
+        }
+        .button{
+        background-color: #f5f5f5;
+        border:none;
+        color:#707070;
+        font-size:15px;
+        padding: 10px 20px;
+        margin:5px;
+        border-radius:4px;
+        outline:none;
+        }
+        .button:hover{
+        border: 1px solid #c8c8c8;
+        padding: 9px 19px;
+        color:#808080;
+        }
+        .button:focus{
+        border:1px solid #4885ed;
+        padding: 9px 19px;
+        }
+        #foot1{
+            margin-top: 11%;
+            background-color: #F2F2F2;
+            padding: 15px;
+            padding-left: 40px;
+            border: 1px solid gray;
+            
+        }
+        #foot2
+        {
+            display: flex;
+            background-color: #F2F2F2;
+            padding: 15px 0px;
+            justify-content: space-between;
+            flex-wrap: wrap ;
+            width: 100%;
+            
+        }
+        .l1
+        {
+            display: flex;
+            flex-direction: row;
+
+        }
+        .l2
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+        .bottom
+        {
+            position: sticky;
+            bottom: 0px;
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="top">
+        
+        <ul class="it1">
+            <li ><a href="#">Gmail</a></li>
+        </ul>
+        <ul class="it2">
+            <li ><a href="#">images</a></li>
+        </ul>
+        <div class="grid">
+            <ul class="it3">
+                <li ><a href="#"><img id="menu" src="images/menu.png" alt="menu"></a></li>
+            </ul>
+           
+        </div>
+        <ul class="it4">
+            <li ><button id="signin"><a href="#" style="color: white;">Sign in</a></button></li>
+        </ul>
+
+    </div>
+
+    <div class="middle">
+        <div id="doodle">
+            <img id="doodle-img" src="images/doodle.gif">
+        </div>
+        <div class="search-container">        
+            <div class="search">
+                <svg id="search-icon" class="search-icon" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+                <input id="searchbar"type="text">
+                <a href="#"> <img class="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice"></a>
+            </div>
+            <div class="buttons">
+                <button class="button" type="button">Google Search</button>
+                <button class="button" type="button">I'm Feeling Lucky</button></div>
+
+        </div>
+    </div>
+    <div class="bottom">
+        <div id="foot1">
+            <p>India</p>
+        </div>
+        <div id="foot2">
+            <div class="l1">
+                <ul>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Advertising</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">How Search works</a></li>
+                </ul>
+                
+            </div>
+            <div class="l2">
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">settings</a></li>
+                </ul>
+                
+                
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
